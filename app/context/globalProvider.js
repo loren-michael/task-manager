@@ -17,7 +17,7 @@ export const GlobalProvider = ({ children }) => {
         theme, 
       }}
     >
-      <GlobalUpdateContext.Provider value={setGlobalState}>
+      <GlobalUpdateContext.Provider value={{}}>
         {children}
       </GlobalUpdateContext.Provider>
     </GlobalContext.Provider>
