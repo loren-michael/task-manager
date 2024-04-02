@@ -9,9 +9,11 @@ interface Props {
 
 function ContextProvider({ children }: Props) {
   return (
-    <GlobalStylesProvider>
-      {children}
-    </GlobalStylesProvider>
+    <ContextProvider>
+      <GlobalStylesProvider>
+        {children}
+      </GlobalStylesProvider>
+    </ContextProvider>
   )
 };
 
