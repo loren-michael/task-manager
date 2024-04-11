@@ -30,3 +30,4 @@ export const staggered = <i class="fa-solid fa-bars-staggered"></i>;
 export const repeat = <i class="fa-solid fa-arrows-rotate"></i>;
 export const userslash = <i class="fa-solid fa-user-slash"></i>;
 export const userx = <i class="fa-solid fa-user-xmark"></i>;
+export const timeline = <i class="fa-solid fa-timeline"></i>;

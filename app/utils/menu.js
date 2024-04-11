@@ -1,4 +1,4 @@
-import { list, check, todo, home, userx } from "./icons";
+import { list, check, todo, home, userx, progress, staggered } from "./icons";
 
 const menu = [
   {
@@ -16,7 +16,7 @@ const menu = [
     {
     id: 3,
     title: "In Progress",
-    icon: todo,
+    icon: staggered,
     link: "/incomplete",
   },
   {
