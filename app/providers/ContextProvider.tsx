@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { GlobalProvider } from "../context/globalProvider";
 
@@ -13,7 +12,7 @@ function ContextProvider({ children }: Props) {
       <GlobalProvider>
         {children}
       </GlobalProvider>
-    // </ContextProvider>
+    // {/* </ContextProvider> */}
   )
 };
 

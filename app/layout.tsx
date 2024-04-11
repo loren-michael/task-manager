@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import GlobalStylesProvider from "./providers/GlobalStylesProvider";
+import GlobalStyleProvider from "./providers/GlobalStyleProvider";
 import ContextProvider from "./providers/ContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,10 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ContextProvider>
-          <GlobalStylesProvider>
+          <GlobalStyleProvider>
             <Sidebar />
             {children}
-          </GlobalStylesProvider>
+          </GlobalStyleProvider>
         </ContextProvider>
       </body>
     </html>
