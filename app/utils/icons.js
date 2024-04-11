@@ -27,4 +27,6 @@ export const plus = <i className="fa-solid fa-plus fa-beat-fade"></i>;
 export const comment = <i className="fa-solid fa-comment"></i>;
 export const progress = <i class="fa-solid fa-bars-progress"></i>;
 export const staggered = <i class="fa-solid fa-bars-staggered"></i>;
-export const repeat = <i class="fa-solid fa-arrows-rotate"></i>
+export const repeat = <i class="fa-solid fa-arrows-rotate"></i>;
+export const userslash = <i class="fa-solid fa-user-slash"></i>;
+export const userx = <i class="fa-solid fa-user-xmark"></i>;
