@@ -13,17 +13,17 @@ const menu = [
     icon: list,
     link: "/important",
   },
-  {
+    {
     id: 3,
-    title: "Completed!",
-    icon: check,
-    link: "/completed",
+    title: "In Progress",
+    icon: todo,
+    link: "/incomplete",
   },
   {
     id: 4,
-    title: "Do It Now",
-    icon: todo,
-    link: "/incomplete",
+    title: "Completed!",
+    icon: check,
+    link: "/completed",
   },
 ];
 
