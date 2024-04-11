@@ -33,7 +33,10 @@ function Sidebar() {
         {menu.map((item) => {
           const link = item.link;
           return (
-            <li className={`nav-item ${pathname === link ? 'active' : ''}`} onClick={() => {handleClick(item.link)}}>
+            <li 
+              className={`nav-item ${pathname === link ? 'active' : ''}`} 
+              onClick={() => {handleClick(item.link)}}
+            >
               {item.icon}
               <Link href={item.link}>
                 {item.title}
@@ -42,6 +45,7 @@ function Sidebar() {
           )
         })}
       </ul>
+      <button></button>
     </SidebarStyled>
   )
 }
