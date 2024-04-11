@@ -11,7 +11,13 @@ function Sidebar() {
     <SidebarStyled theme={theme} collapsed={collapsed}>
       <div className="profile">
         <div className="profile-overlay"></div>
-        <Image width={70} height={70} src="socketface.jpg" alt="profile" />
+        <div className="image">
+          <Image width={70} height={70} src="/socketface.jpg" alt="profile" />
+        </div>
+        <h1>
+          <span>Farwell</span>
+          <span>Tasks</span>
+        </h1>
       </div>
     </SidebarStyled>
   )
