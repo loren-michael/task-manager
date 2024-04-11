@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import { useGlobalState } from '@/app/context/globalProvider';
 import Image from 'next/image';
@@ -19,6 +19,9 @@ function Sidebar() {
           <span>Tasks</span>
         </h1>
       </div>
+      <ul className="nav-items">
+
+      </ul>
     </SidebarStyled>
   )
 }
