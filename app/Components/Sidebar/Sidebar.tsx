@@ -2,13 +2,17 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components';
 import { useGlobalState } from '@/app/context/globalProvider';
+import Image from 'next/image';
 
 function Sidebar() {
   const { theme, collapsed, collapeMenu } = useGlobalState();
 
   return (
-    <SidebarStyled theme={ theme } collapsed={ collapsed }>
-      Sidebar
+    <SidebarStyled theme={theme} collapsed={collapsed}>
+      <div className="profile">
+        <div className="profile-overlay"></div>
+        <Image 
+      </div>
     </SidebarStyled>
   )
 }
