@@ -12,7 +12,7 @@ function Sidebar() {
       <div className="profile">
         <div className="profile-overlay"></div>
         <div className="image">
-          <Image width={70} height={70} src="/socketface.jpg" alt="profile" />
+          <Image width={70} height={70} src="/courtyard.png" alt="profile" />
         </div>
         <h1>
           <span>Farwell</span>
