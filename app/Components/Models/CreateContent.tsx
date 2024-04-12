@@ -34,11 +34,31 @@ const handleChange = (name: string) => (e: any) => {
     default:
       break;
   }
-}
+};
+
+const handleSubmit = async (e:any) => {
+  e.preventDefault();
+
+  const task = {
+    title,
+    description,
+    dueDate,
+    important,
+    started,
+    completed
+  };
+
+  try {
+    const res = await 
+  } catch (error) {
+
+  }
+
+};
 
 
   return (
-    <div>
+    <form onSbumit={handleSubmit}>
       <h1>Create a task</h1>
       <div className="input-control">
         <label htmlFor="title">Title</label>
@@ -105,7 +125,7 @@ const handleChange = (name: string) => (e: any) => {
       <div className="submit-btn">
         <button type="submit"> Submit </button>
       </div>
-    </div>
+    </form>
   )
 }
 
