@@ -100,7 +100,7 @@ const handleSubmit = async (e:any) => {
             placeholder='Task description'
           />
         </div>
-        <div className="input-control">
+        {/* <div className="input-control">
           <label htmlFor="dueDate">Due Date</label>
           <input 
             type="date" 
@@ -109,7 +109,7 @@ const handleSubmit = async (e:any) => {
             name="title"
             onChange={handleChange("duedate")}
           />
-        </div>
+        </div> */}
         <div className="input-control">
           <label htmlFor='completed'>Important</label>
           <input
