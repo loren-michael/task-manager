@@ -75,8 +75,8 @@ const handleSubmit = async (e:any) => {
 
 
   return (
-    <CreateContentStyled theme={theme}>
-      <form onSubmit={handleSubmit}>
+    <CreateContentStyled theme={theme} onSubmit={handleSubmit}>
+      <div>
         <h1>Create a task</h1>
         <div className="input-control">
           <label htmlFor="title">Title</label>
@@ -143,7 +143,7 @@ const handleSubmit = async (e:any) => {
         <div className="submit-btn">
           <button type="submit"> Submit </button>
         </div>
-      </form>
+      </div>
     </CreateContentStyled>
   )
 }

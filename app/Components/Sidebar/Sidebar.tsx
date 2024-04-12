@@ -36,6 +36,7 @@ function Sidebar() {
             <li 
               className={`nav-item ${pathname === link ? 'active' : ''}`} 
               onClick={() => {handleClick(item.link)}}
+              key={item.title}
             >
               {item.icon}
               <Link href={item.link}>
