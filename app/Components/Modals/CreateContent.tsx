@@ -5,14 +5,19 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import styled from 'styled-components';
+import { useAuth } from '@clerk/nextjs';
 
 function CreateContent() {
+  const { userId } = useAuth();
+  
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [completed, setCompleted] = useState(false);
   const [started, setStarted] = useState(false);
   const [important, setImportant] = useState(false);
+  const [assignedUser, setAssignedUser] = useState(userId)
 
   const { theme } = useGlobalState();
 
@@ -28,13 +33,14 @@ const handleChange = (name: string) => (e: any) => {
       setDueDate(e.target.value);
       break;
     case "important":
-      setImportant(e.target.value);
+      console.log(important)
+      setImportant(e.target.checked);
       break;
     case "started":
-      setStarted(e.target.value);
+      setStarted(e.target.checked);
       break;
     case "completed":
-      setCompleted(e.target.value);
+      setCompleted(e.target.checked);
       break;
     default:
       break;
@@ -50,7 +56,8 @@ const handleSubmit = async (e:any) => {
     dueDate,
     important,
     started,
-    completed
+    completed,
+    assignedUser
   };
 
   try {
@@ -110,30 +117,30 @@ const handleSubmit = async (e:any) => {
             onChange={handleChange("dueDate")}
           />
         </div>
-        <div className="input-control">
+        <div className="input-control toggler">
           <label htmlFor='completed'>Important</label>
           <input
-            value={important.toString()}
+            checked={important}
             onChange={handleChange("important")}
             type="checkbox"
             name="important"
             id="important"
           />
         </div>
-        <div className="input-control">
+        <div className="input-control toggler">
           <label htmlFor='started'>Started</label>
           <input
-            value={started.toString()}
+            checked={started}
             onChange={handleChange("started")}
             type="checkbox"
             name="started"
             id="started"
           />
         </div>
-        <div className="input-control">
+        <div className="input-control toggler">
           <label htmlFor='completed'>Completed</label>
           <input
-            value={completed.toString()}
+            checked={completed}
             onChange={handleChange("completed")}
             type="checkbox"
             name="completed"
